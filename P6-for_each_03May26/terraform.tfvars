@@ -1,0 +1,1 @@
+resource_groups = ["rg-test1", "rg-test2", "rg-test3", "rg-test4", "rg-test5"]

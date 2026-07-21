@@ -1,0 +1,1 @@
+variable "infy-vnet" {}
