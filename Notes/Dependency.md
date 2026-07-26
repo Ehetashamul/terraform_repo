@@ -1,4 +1,4 @@
-# Azure Terraform Dependencies (Concept Inside)
+# Azure Terraform Dependencies
 
 Terraform dependencies determine **the order in which Azure resources are created, updated, or destroyed**. Terraform builds a **Dependency Graph (DAG - Directed Acyclic Graph)** to understand which resources depend on others.
 

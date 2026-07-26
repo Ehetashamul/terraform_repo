@@ -1,5 +1,3 @@
-# Terraform Attributes (`/conceptinside`)
-
 ## What is a Terraform Attribute?
 
 A **Terraform attribute** is a **property (field) of a resource, data source, module, or variable** that stores a value.

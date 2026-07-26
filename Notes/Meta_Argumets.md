@@ -1,4 +1,4 @@
-# /conceptinside — Azure Terraform Meta-Arguments
+Azure Terraform Meta-Arguments
 
 Meta-arguments are **special Terraform keywords** that control **how resources and modules are created, managed, or destroyed**. They are **not Azure-specific**—they work with all Terraform providers (Azure, AWS, GCP, etc.).
 
