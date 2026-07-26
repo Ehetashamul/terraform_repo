@@ -1,0 +1,9 @@
+title = "Terraform Rules"
+
+[[rules]]
+id = "terraform-admin-password"
+description = "Terraform admin_password detected"
+
+regex = '''admin_password\s*=\s*"[^"]+"'''
+
+tags = ["terraform", "password"]
