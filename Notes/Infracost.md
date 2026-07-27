@@ -1,6 +1,4 @@
-# `/conceptinside` — Infracost
-
-## 📌 What is Infracost?
+# 📌 What is Infracost?
 
 **Infracost** is an open-source **FinOps** tool that estimates the **monthly cost of your cloud infrastructure before it is deployed**.
 
