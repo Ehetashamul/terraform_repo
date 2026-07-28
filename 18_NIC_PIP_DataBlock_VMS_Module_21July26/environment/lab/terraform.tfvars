@@ -49,7 +49,7 @@ public_ips = {
 }
 
 vms = {
-  nic1 = {
+  vm1 = {
     nic_name                = "nic_frontend-vm"
     location                = "centralindia"
     rg_name                 = "infy-rg"
@@ -68,7 +68,7 @@ vms = {
     image_version           = "latest"
 
   }
-  nic2 = {
+  vm2 = {
     nic_name                = "nic_backend-vm"
     location            = "centralindia"
     rg_name                 = "infy-rg"
