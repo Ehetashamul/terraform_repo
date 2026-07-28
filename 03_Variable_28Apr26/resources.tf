@@ -26,9 +26,9 @@
 
 
 variable "tpg_rg2" {
-    type = string
-    default = "tpg_prod_default_rg"
-    description = "tpg australia resource2"
+  type        = string
+  default     = "tpg_prod_default_rg"
+  description = "tpg australia resource2"
 }
 
 

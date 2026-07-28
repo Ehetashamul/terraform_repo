@@ -7,7 +7,7 @@ infy-vnet = {
     address_space       = ["10.10.0.0/16"]
   }
 
-vnet2 = {
+  vnet2 = {
 
     name                = "infy-vnet2"
     location            = "eastus"

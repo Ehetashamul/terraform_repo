@@ -20,5 +20,5 @@ infy-NIC = {
       subnet_id                     = "/subscriptions/7a04619b-86b3-4bc8-8b52-8168bd785f0b/resourceGroups/infy-rg1/providers/Microsoft.Network/virtualNetworks/infy-vnet1/subnets/infy-subnet2"
       private_ip_address_allocation = "Dynamic"
     }
-}
+  }
 }
