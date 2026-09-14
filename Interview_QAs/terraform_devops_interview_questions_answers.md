@@ -11,7 +11,7 @@
 | Security | Workload identity/managed identity + Key Vault + protected state |
 | Drift | Detect with plan; decide whether code or external change is authoritative |
 
-## Q1. 13 - create a storage account and write code for storing state file in blob storage …
+## Q1. create a storage account and write code for storing state file in blob storage …
 
 **Asked in:** Creospan
 
@@ -19,7 +19,7 @@
 
 Create an Azure Storage Account and a Blob Container dedicated to Terraform state, then configure the `azurerm` backend in `terraform { backend "azurerm" { ... } }`. Enable appropriate storage security and versioning/soft-delete where supported, restrict access with RBAC/network controls, and use state locking provided by the backend. Run `terraform init` to initialize/migrate the backend.
 
-## Q2. 1st round HCL question: what is module? what is provisioners? what is null resource? what is statefile? what is state locking in terraform? what is variable? write code with module and for_each; what is providers and write code; process to setup terraform; what is file provisioners; what is data variable?
+## Q2. what is module? what is provisioners? what is null resource? what is statefile? what is state locking in terraform? what is variable? write code with module and for_each; what is providers and write code; process to setup terraform; what is file provisioners; what is data variable?
 
 **Asked in:** HCL
 
@@ -2356,7 +2356,3 @@ State locking prevents two Terraform operations from writing the same state conc
 In Terraform, this should be explained in terms of **configuration → state → dependency graph → plan → provider/API execution**. Define the concept, give a small example, and mention one production best practice or caveat.
 
 ---
-
-## Source coverage note
-
-The attachment's master Terraform repository identifies 293 unique canonical questions. The extracted set was taken from that Terraform section rather than only one company's chapter, so it covers the cross-company Terraform question bank. The handbook's company chapters also contain Terraform questions such as state locking, drift, modules, import, lifecycle and remote state. fileciteturn1file0L10-L25
