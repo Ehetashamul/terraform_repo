@@ -498,3 +498,147 @@ Terraform Blocks
     └── check
 ```
 
+# Terraform Architecture and Lifecycle
+
+I recommend treating **Terraform Lifecycle** and **Terraform Architecture** as two separate concepts, because lifecycle explains *how Terraform operates*, while architecture explains *what components participate*.
+
+## Recommended structure
+
+```text
+terraform/
+├── 01-fundamentals/
+├── 02-configuration/
+├── 03-blocks/
+├── 04-lifecycle/
+│   ├── README.md
+│   ├── init.md
+│   ├── validate.md
+│   ├── plan.md
+│   ├── apply.md
+│   ├── refresh.md
+│   ├── state.md
+│   └── destroy.md
+│
+└── 05-architecture/
+    ├── README.md
+    ├── terraform-core.md
+    ├── providers.md
+    ├── state.md
+    ├── configuration.md
+    ├── dependency-graph.md
+    ├── backend.md
+    └── execution-flow.md
+```
+
+### Terraform Lifecycle
+
+The core lifecycle should be documented as:
+
+```text
+                 Terraform Configuration
+                          │
+                          ▼
+                     terraform init
+                          │
+                          ▼
+                   terraform validate
+                          │
+                          ▼
+                     terraform plan
+                          │
+                          ▼
+                    Review Changes
+                          │
+                          ▼
+                    terraform apply
+                          │
+                          ▼
+                   Infrastructure
+                          │
+                          ▼
+                    Terraform State
+                          │
+                          ▼
+              Configuration changes
+                          │
+                          └──────────────► plan
+                                           │
+                                           ▼
+                                         apply
+```
+
+And when infrastructure is no longer required:
+
+```text
+terraform destroy
+       │
+       ▼
+Infrastructure deleted
+       │
+       ▼
+State updated
+```
+
+### Architecture
+
+The high-level architecture can be represented as:
+
+```text
+                    Terraform CLI
+                         │
+                         ▼
+                 Terraform Core
+                  /      |      \
+                 /       |       \
+                ▼        ▼        ▼
+        Configuration   State    Dependency
+             │                    Graph
+             │
+             ▼
+          Provider
+             │
+             ▼
+       Provider API
+             │
+             ▼
+     Cloud / Infrastructure
+       ┌─────┼─────┐
+       ▼     ▼     ▼
+     Azure   VM   Storage
+```
+
+For your Azure-focused learning, the important flow is:
+
+```text
+Terraform Configuration
+        │
+        ▼
+Terraform Core
+        │
+        ▼
+AzureRM Provider
+        │
+        ▼
+Azure API
+        │
+        ▼
+Azure Resources
+```
+
+**Important distinction:** Terraform itself does not directly create an Azure VM, VNet, Storage Account, etc. **Terraform Core communicates through the AzureRM provider**, and the provider communicates with Azure APIs.
+
+I would therefore put **Lifecycle before Architecture** in your ConceptInside learning path:
+
+```text
+01 Fundamentals
+02 Configuration
+03 Blocks
+04 Lifecycle
+05 Architecture
+06 State
+07 Providers
+08 Variables
+09 Resources
+10 Modules
+...
+```
