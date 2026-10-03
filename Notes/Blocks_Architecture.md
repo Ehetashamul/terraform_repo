@@ -627,18 +627,3 @@ Azure Resources
 
 **Important distinction:** Terraform itself does not directly create an Azure VM, VNet, Storage Account, etc. **Terraform Core communicates through the AzureRM provider**, and the provider communicates with Azure APIs.
 
-I would therefore put **Lifecycle before Architecture** in your ConceptInside learning path:
-
-```text
-01 Fundamentals
-02 Configuration
-03 Blocks
-04 Lifecycle
-05 Architecture
-06 State
-07 Providers
-08 Variables
-09 Resources
-10 Modules
-...
-```
